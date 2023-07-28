@@ -32,13 +32,13 @@ export const InputArea = ({ onAdd }: Props) => {
             });
         }
         if (!categoryKeys.includes(categoryField)) {
-            errors.push('Categoria inválida!');
+            errors.push('Categoria inválida! Selecionar uma nova existente');
         }
         if (titleField === '') {
-            errors.push('Título vazio!');
+            errors.push('Título vazio! Insira uma breve descrição');
         }
         if (valueField <= 0) {
-            errors.push('Valor inválido!');
+            errors.push('Valor inválido! Insira um valor correto');
         }
 
         if (errors.length > 0) {
