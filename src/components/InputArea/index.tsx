@@ -1,10 +1,13 @@
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 import { categories } from '../../data/categories';
 import { newDateAdjusted } from '../../helpers/dataFilter';
 import { Item } from '../../types/Item';
 import * as C from './styles';
+
+
 
 type Props = {
     onAdd: (item: Item) => void;
@@ -22,7 +25,11 @@ export const InputArea = ({ onAdd }: Props) => {
         let errors: string[] = [];
 
         if (isNaN(new Date(dateField).getTime())) {
-            errors.push('Data inválida!');
+            Swal.fire({
+                icon: 'info',
+                title: 'Oops...',
+                text: 'Data invalida! Insira uma nova data',
+            });
         }
         if (!categoryKeys.includes(categoryField)) {
             errors.push('Categoria inválida!');
@@ -76,8 +83,9 @@ export const InputArea = ({ onAdd }: Props) => {
                 <C.Input type="text" value={titleField} onChange={e => setTitleField(e.target.value)} />
             </C.InputLabel>
             <C.InputLabel>
-                <C.InputTitle>Valor</C.InputTitle>
-                <C.Input type="number" value={valueField} onChange={e => setValueField(parseFloat(e.target.value))} />
+                <C.InputTitle>Valor
+                </C.InputTitle>
+                <C.Input type="number" value={valueField} prefix={'R$'} onChange={e => setValueField(parseFloat(e.target.value))} />
             </C.InputLabel>
             <C.InputLabel>
                 <C.InputTitle>&nbsp;</C.InputTitle>
