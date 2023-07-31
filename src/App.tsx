@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import * as C from './App.styles';
+import Logo from './assets/logo.png';
 import { InfoArea } from './components/InfoArea';
 import { InputArea } from './components/InputArea';
 import { TableArea } from './components/TableArea';
@@ -49,7 +50,8 @@ const App = () => {
   return (
     <C.Container>
       <C.Header>
-        <C.HeaderText>BellFinance</C.HeaderText>
+        <C.HeaderText>
+          <img src={Logo} alt="logo bellfinance" title='Bellfinance' className='logo' width='300px' /></C.HeaderText>
       </C.Header>
       <C.Body>
 

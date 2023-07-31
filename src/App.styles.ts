@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.div``;
 
 export const Header = styled.div`
-    background-color: darkblue;
+    background-color: greylight;
+    box-shadow: 10px 15px 15px #CCC;
     height: 150px;
     text-align: center;
 `;
@@ -20,3 +21,11 @@ export const Body = styled.div`
     max-width: 980px;
     margin-botton: 50px;
 `;
+
+// export const Logo = styled.div`
+
+// width: 300px;
+// display: block;
+// margin: auto;
+// padding: 0;
+// `;
