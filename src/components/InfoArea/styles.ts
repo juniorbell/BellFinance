@@ -17,10 +17,13 @@ export const MonthArea = styled.div`
 `;
 
 export const MonthArrow = styled.div`
-    width: 40px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: #FBB03B;
     text-align: center;
-    font-size: 25px;
+    font-size: 24px;
     cursor: pointer;
+    color: white;
 `;
 
 export const MonthTitle = styled.div`

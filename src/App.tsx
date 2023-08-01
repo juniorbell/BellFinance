@@ -4,11 +4,13 @@ import Logo from './assets/logo.png';
 import { InfoArea } from './components/InfoArea';
 import { InputArea } from './components/InputArea';
 import { TableArea } from './components/TableArea';
+import Footer from "./components/footer/footer";
 import { categories } from './data/categories';
 import { items } from './data/items';
 import { filterListByMonth, getCurrentMonth } from './helpers/dataFilter';
 import './index.css';
 import { Item } from './types/Item';
+
 
 const App = () => {
   const [list, setList] = useState(items);
@@ -69,6 +71,8 @@ const App = () => {
       </C.Body>
     </C.Container>
   );
-}
 
+
+}
+<Footer />
 export default App;

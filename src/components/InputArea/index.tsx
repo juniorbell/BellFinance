@@ -1,4 +1,4 @@
-import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import Swal from 'sweetalert2';
@@ -89,7 +89,7 @@ export const InputArea = ({ onAdd }: Props) => {
             </C.InputLabel>
             <C.InputLabel>
                 <C.InputTitle>&nbsp;</C.InputTitle>
-                <C.Button onClick={handleAddEvent}><FontAwesomeIcon icon={faPlusCircle} /></C.Button>
+                <C.Button onClick={handleAddEvent}><FontAwesomeIcon icon={faPlus} /></C.Button>
             </C.InputLabel>
         </C.Container>
     );

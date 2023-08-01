@@ -36,14 +36,14 @@ export const Button = styled.button`
     height: 2rem;
     padding: 0 5px;
     border-radius: 15px;
-    background-color: lightblue;
+    background-color: #FBB03B;
     box-shadow: 0px 5px 5px #CCC;
     color: white;
     cursor: pointer;
 
     &:hover {
         transition: 0.4s;
-        background-color: blue;
-        color: white;
+        background-color: transparent;
+        color: #FBB03B;
     }
 `;
