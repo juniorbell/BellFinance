@@ -1,7 +1,6 @@
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
-import Swal from 'sweetalert2';
 import { categories } from '../../data/categories';
 import { newDateAdjusted } from '../../helpers/dataFilter';
 import { Item } from '../../types/Item';
@@ -25,11 +24,7 @@ export const InputArea = ({ onAdd }: Props) => {
         let errors: string[] = [];
 
         if (isNaN(new Date(dateField).getTime())) {
-            Swal.fire({
-                icon: 'info',
-                title: 'Oops...',
-                text: 'Data invalida! Insira uma nova data',
-            });
+            errors.push('Data inválida! Selecionar uma nova existente');
         }
         if (!categoryKeys.includes(categoryField)) {
             errors.push('Categoria inválida! Selecionar uma nova existente');
