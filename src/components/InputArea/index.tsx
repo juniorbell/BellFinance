@@ -27,7 +27,7 @@ export const InputArea = ({ onAdd }: Props) => {
             errors.push('Data inválida! Selecionar uma nova existente');
         }
         if (!categoryKeys.includes(categoryField)) {
-            errors.push('Categoria inválida! Selecionar uma nova existente');
+            errors.push('Insita uma categoria para prosseguir.');
         }
         if (titleField === '') {
             errors.push('Título vazio! Insira uma breve descrição');
@@ -68,17 +68,18 @@ export const InputArea = ({ onAdd }: Props) => {
                     <>
                         <option></option>
                         {categoryKeys.map((key, index) => (
-                            <option key={index} value={key}>{categories[key].title}</option>
+                            <option key={index} placeholder='
+                            Selecionar categoria' value={key}>{categories[key].title}</option>
                         ))}
                     </>
                 </C.Select>
             </C.InputLabel>
             <C.InputLabel>
                 <C.InputTitle>Título</C.InputTitle>
-                <C.Input type="text" value={titleField} onChange={e => setTitleField(e.target.value)} />
+                <C.Input type="text" value={titleField} placeholder='Inserir descrição' onChange={e => setTitleField(e.target.value)} />
             </C.InputLabel>
             <C.InputLabel>
-                <C.InputTitle>Valor
+                <C.InputTitle>Valor R$
                 </C.InputTitle>
                 <C.Input type="number" value={valueField} prefix={'R$'} onChange={e => setValueField(parseFloat(e.target.value))} />
             </C.InputLabel>
