@@ -1,6 +1,7 @@
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 import { categories } from '../../data/categories';
 import { newDateAdjusted } from '../../helpers/dataFilter';
 import { Item } from '../../types/Item';
@@ -24,16 +25,31 @@ export const InputArea = ({ onAdd }: Props) => {
         let errors: string[] = [];
 
         if (isNaN(new Date(dateField).getTime())) {
-            errors.push('Data inválida! Selecionar uma nova existente');
+            Swal.fire({
+                icon: 'info',
+                title: 'Data inválida.',
+                text: 'Favor inserir uma data válida',
+            })
         }
         if (!categoryKeys.includes(categoryField)) {
-            errors.push('Insita uma categoria para prosseguir.');
+            Swal.fire({
+                icon: 'info',
+                title: 'Selecionar categória',
+                text: 'Favor inserir uma categória válida',
+            })
         }
         if (titleField === '') {
-            errors.push('Título vazio! Insira uma breve descrição');
+            Swal.fire({
+                icon: 'info',
+                title: 'Inserir descrição',
+            })
         }
         if (valueField <= 0) {
-            errors.push('Valor inválido! Insira um valor correto');
+            Swal.fire({
+                icon: 'info',
+                title: 'Formato de valor inválid0.',
+                text: 'Favor inserir uma valor válido',
+            })
         }
 
         if (errors.length > 0) {
@@ -43,9 +59,10 @@ export const InputArea = ({ onAdd }: Props) => {
                 date: newDateAdjusted(dateField),
                 category: categoryField,
                 title: titleField,
-                value: valueField
+                value: valueField,
             });
             clearFields();
+
         }
     }
 

@@ -7,7 +7,7 @@ export const Container = styled.div`
     padding: 20px;
     margin-top: 20px;
     display: flex;
-    align-items: left;
+    align-items: center;
 `;
 export const InputLabel = styled.label`
     flex: 1;
@@ -16,7 +16,9 @@ export const InputLabel = styled.label`
 export const InputTitle = styled.div`
     font-weight: bold;
     margin-bottom: 5px;
-`;
+    text-aling: center;
+    color: #FBB03B
+    `;
 export const Input = styled.input`
     width: 100%;
     height: 30px;
