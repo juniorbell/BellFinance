@@ -53,7 +53,7 @@ const App = () => {
     <C.Container>
       <C.Header>
         <C.HeaderText>
-          <img src={Logo} alt="logo bellfinance" title='Bellfinance' className='logo' width='300px' /></C.HeaderText>
+          <img src={Logo} alt="logo bellfinance" title='Bellfinance' className='logo' width='500px' /></C.HeaderText>
       </C.Header>
       <C.Body>
 
@@ -67,6 +67,7 @@ const App = () => {
         <InputArea onAdd={handleAddItem} />
 
         <TableArea list={filteredList} />
+        <Footer></Footer>
 
       </C.Body>
     </C.Container>

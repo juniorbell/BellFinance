@@ -1,0 +1,35 @@
+/* Footer.css */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .footer-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .footer-version {
+    position: fixed;
+    text-align: end;
+    left: 20px;
+    color: #666;
+    font-size: 0.9em;
+  }
+  
+  .footer-logo {
+    height: 40px; /* Ajuste o tamanho da logo conforme necessário */
+  }
+  

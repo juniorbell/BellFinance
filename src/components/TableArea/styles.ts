@@ -7,6 +7,10 @@ export const Table = styled.table`
     box-shadow: 0px 0px 5px #CCC;
     border-radius: 10px;
     margin-top: 2rem;
+    text-align: center;
+    border: 2px red;
+
+
 `;
 export const TableHeadColumn = styled.th<{ width?: number }>`
     width: ${props => props.width ? `${props.width}px` : 'auto'};

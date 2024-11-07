@@ -1,10 +1,15 @@
+import React from 'react';
+import './footer.css'; // Importa o estilo CSS para o footer
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer>
-      <h1>Este é o rodapé da minha aplicação.</h1>
+    <footer className="footer">
+      <div className="footer-content">
+        <span className="footer-version">V 1.0.2.0</span>
+        <img src="/logo.png" alt="Logo" className="footer-logo" />
+      </div>
     </footer>
   );
-};
+}
 
 export default Footer;
